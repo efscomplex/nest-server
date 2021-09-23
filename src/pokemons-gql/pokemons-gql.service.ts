@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common'
 import { request } from 'graphql-request'
-import { Pokemon } from 'src/pokemons-api/models'
-import pokemonsQuery from 'src/pokemons-api/resources/pokemonsQuery'
+import { Pokemon } from 'src/pokemons-gql/models'
+import pokemonsQuery from 'src/pokemons-gql/resources/pokemonsQuery'
 
 @Injectable()
-export class PokemonsApiService {
+export class PokemonsGqlService {
   public POKEMONS_URL = 'https://graphql-pokeapi.graphcdn.app/'
 
   async getPokemons(): Promise<Pokemon[]> {
